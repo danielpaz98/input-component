@@ -1,0 +1,168 @@
+.input {
+	position           : relative;
+	--border-color     : #828282;
+	--label-color      : #333333;
+	--helper-text-color: #828282;
+	--icon-color       : #828282;
+	--input-width      : 200px;
+	display            : flex;
+	flex-direction     : column;
+	width              : var(--input-width);
+	transition         : width .3s;
+}
+
+.input .input-element {
+	resize       : none;
+	overflow-wrap: break-word;
+	width        : 100%;
+	padding      : 0 12px;
+	border       : 1px solid var(--border-color);
+	border-radius: 8px;
+	outline      : none;
+	line-height  : 56px;
+	transition   : all .3s;
+}
+
+.input .input-label {
+	order      : -1;
+	font-size  : 12px;
+	font-weight: 400;
+	color      : var(--label-color);
+	line-height: 24px;
+	transition : color .3s;
+}
+
+.input .helper-text {
+	width      : var(--input-width);
+	color      : var(--helper-text-color);
+	font-size  : 10px;
+	line-height: 14px;
+	transition : color .3s;
+}
+
+.input[class*="icon-"] .input-element {
+	padding-left: 40px;
+}
+
+.input i {
+	color     : var(--icon-color);
+	position  : absolute;
+	top       : 42px;
+	left      : 10px;
+	height    : 0;
+	transition: color .3s;
+}
+
+.input.end-icon i {
+	text-align: right;
+	right     : 10px;
+}
+
+.input[class*="icon-"].end-icon .input-element {
+	padding-left : 12px;
+	padding-right: 40px;
+}
+
+.input.full-width {
+	--input-width: 100% !important;
+}
+
+.input.multiline.row-2 .input-element {
+	height: 88px;
+	padding-top: 1.2rem;
+	line-height: initial;
+}
+
+.input.multiline.row-3 .input-element {
+	height: 118px;
+	padding-top: 1.2rem;
+	line-height: initial;
+}
+
+.input.multiline.row-4 .input-element {
+	height: 148px;
+	padding-top: 1.2rem;
+	line-height: initial;
+}
+
+.input .input-element::placeholder {
+  font-size: 14px;
+  color    : #828282;
+  left     : 12px;
+}
+
+.input .input-element:hover {
+	--border-color: #333333;
+}
+
+.input .input-element:focus {
+	--border-color: #2962FF;
+}
+
+/* INPUT ERROR */
+.input.error, .input.error .input-element:focus {
+	--border-color     : #D32F2F !important;
+	--label-color      : #D32F2F !important;
+	--helper-text-color: #D32F2F !important;
+}
+
+.input.error:hover {
+	--border-color     : #333333;
+	--label-color      : #333333;
+	--helper-text-color: #828282;
+}
+/* ----------------------------------------- */
+
+/* INPUT DISABLED */
+.input.disabled, .input.disabled:hover {
+	pointer-events     : none !important;
+	--border-color     : #F2F2F2 !important;
+	--label-color      : #828282 !important;
+	--helper-text-color: #828282 !important;
+}
+
+.input.disabled .input-element {
+	background-color: #F2F2F2 !important;
+	color           : #828282 !important;
+}
+/* ----------------------------------------- */
+
+/* INPUT COLORS */
+.input.input-purple .input-element:focus {
+	--border-color: #9C27B0;
+}
+
+.input.input-teal .input-element:focus {
+	--border-color: #009688;
+}
+
+.input.input-lime .input-element:focus {
+	--border-color: #CDDC39;
+}
+/* ----------------------------------------- */
+
+/* INPUT SIZES */
+.input.size-small .input-element {
+	line-height: 40px;
+}
+
+.input.size-medium .input-element {
+	line-height: 56px;
+}
+
+.input.size-small i {
+	top: 34px;
+}
+
+.input.size-small.multiline.row-2 .input-element {
+	height: 72px;
+}
+
+.input.size-small.multiline.row-3 .input-element {
+	height: 102px;
+}
+
+.input.size-small.multiline.row-4 .input-element {
+	height: 132px;
+}
+/* ----------------------------------------- */
