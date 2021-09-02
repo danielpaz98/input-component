@@ -1,0 +1,217 @@
+@import "./normalize.css";
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--title-font: "Poppins",      sans-serif;
+	--body-font : "Noto Sans JP", sans-serif;
+	/* Mobile font sizes */
+	--h1-font-size   : 2rem;
+	--h2-font-size   : 1.5rem;
+	--h3-font-size   : 1.25rem;
+	--h4-font-size   : 1rem;
+	--big-font-size  : 1rem;
+	--base-font-size : 0.875rem;
+	--small-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    /* Desktop font sizes */
+    --h1-font-size   : 3rem;
+    --h2-font-size   : 2rem;
+    --h3-font-size   : 1.5rem;
+    --h4-font-size   : 1.25rem;
+    --big-font-size  : 1.125rem;
+    --base-font-size : 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+body {
+	margin     : 0;
+	font-family: var(--body-font);
+	font-weight: 500;
+	font-size  : var(--base-font-size);
+}
+
+a {
+	text-decoration: none;
+	color          : inherit;
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--title-font);
+	font-weight: 600;
+}
+
+h1 {
+	font-size: var(--h1-font-size);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+h4 {
+	font-size: var(--h4-font-size);
+}
+
+label {
+	white-space: nowrap;
+}
+
+pre {
+	margin: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+select, option {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.container {
+  max-width      : 1200px;
+  margin-left    : auto;
+  margin-right   : auto;
+  display        : flex;
+  justify-content: center;
+  overflow-x     : auto;
+}
+
+.main-logo {
+	margin-top   : 2rem;
+	margin-bottom: 4rem;
+}
+
+.main-logo a {
+	font-family: var(--title-font);
+	font-weight: 600;
+	font-size  : var(--small-font-size);
+}
+
+.main-logo span {
+	color: #F7542E;
+}
+
+.section-preview {
+	max-width      : 1100px;
+	padding        : 0 .5rem;
+	margin-top     : 1rem;
+	--border-radius: 8px;
+	overflow-x     : auto;
+}
+
+.section-preview-body {
+  display                : grid;
+  grid-template-columns  : minmax(min-content, 640px) minmax(min-content, 380px);
+  border-right           : 1px solid hsl(0, 0%, 80%);
+  border-left            : 1px solid hsl(0, 0%, 80%);
+  border-bottom          : 1px solid hsl(0, 0%, 80%);
+  border-top-left-radius : var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.section-preview-footer {
+	grid-column               : span 2;
+	border-left               : 1px solid hsl(0, 0%, 80%);
+	border-right              : 1px solid hsl(0, 0%, 80%);
+	border-bottom             : 1px solid hsl(0, 0%, 80%);
+	border-bottom-left-radius : var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	overflow                  : hidden;
+}
+
+.section-preview-button {
+	position   : relative;
+	grid-column: span 2;
+	min-height : 200px;
+}
+
+.input-container {
+	padding        : 1rem;
+	position       : relative;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+	height         : 80%;
+}
+
+.section-preview-options {
+	grid-column: span 2;
+	overflow-y : auto;
+}
+
+.title-section {
+	text-align   : center;
+	margin       : 0;
+	padding      : .5rem;
+	border-top   : 1px solid hsl(0, 0%, 80%);
+	border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.section-preview-button .title-section {
+	border-top-left-radius : var(--border-radius);
+	border-top-right-radius: var(--border-radius);
+}
+
+.section-preview-options .title-section {
+	border-radius: none;
+}
+
+.control-options {
+  padding    : 1rem;
+  color      : rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.control-options > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.option-group {
+	display    : flex;
+	align-items: center;
+	gap        : .75rem;
+}
+
+@media screen and (min-width: 800px) {
+	main {
+		display    : flex;
+		align-items: flex-start;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.section-preview {
+		margin-top: 4rem;
+	}
+
+	.section-preview-button {
+		grid-column : span 1;
+		border-right: 1px solid hsl(0, 0%, 80%);
+	}
+
+	.section-preview-button .title-section {
+		border-top-left-radius : var(--border-radius);
+		border-top-right-radius: 0;
+	}
+	
+	.section-preview-options .title-section {
+		border-top-right-radius: var(--border-radius);
+	}
+
+	.section-preview-options {
+		grid-column: span 1;
+	}
+}
