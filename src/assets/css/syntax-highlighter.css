@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
+
+.syntax-highlighter {
+	position: relative;
+}
+
+.syntax-highlighter code {
+  font-family: "Fira Code";
+}
+
+.copy-button {
+	cursor          : pointer;
+	position        : absolute;
+	right           : 8px;
+	top             : 8px;
+	background-color: transparent;
+	padding         : 0;
+	outline         : none;
+	border          : none;
+	color           : #88C0D0;
+}
+
+.copy-button i {
+	position: relative;
+	z-index : 1;
+}
+
+.copy-button i::before {
+	position     : absolute;
+	content      : "";
+	height       : 36px;
+	width        : 36px;
+	top          : 50%;
+	left         : 50%;
+	transform    : translate(-50%, -50%);
+	border-radius: 20px;
+	z-index      : -1;
+	transition   : background-color .3s;
+}
+
+.copy-button:hover i::before {
+	background-color: rgba(33, 38, 46, 0.8);
+}
+
+.copy-button:focus i::before {
+	background-color: rgba(13, 15, 19, 0.8);
+}
