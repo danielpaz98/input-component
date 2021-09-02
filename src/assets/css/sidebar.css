@@ -1,0 +1,109 @@
+.main-sidebar {
+	padding   : 0 2rem;
+	margin-top: 2rem;
+	min-width : 200px;
+}
+
+.main-sidebar.show {
+	transform: translateX(0);
+}
+
+.sidebar-menu {
+	list-style  : none;
+	padding-left: 0;
+	margin-top  : 0;
+}
+
+.sidebar-item {
+	color      : #9E9E9E;
+	padding-top: 2.5rem;
+}
+
+.sidebar-item a {
+	cursor: pointer;
+}
+
+.sidebar-item.active {
+	color: #090F31;
+}
+
+.overlay {
+	display         : none;
+	position        : fixed;
+	top             : 0;
+	right           : 0;
+	width           : 100px;
+	height          : 100px;
+	background-color: rgb(33, 33, 33);
+	opacity         : .6;
+	z-index         : 40;
+	min-height      : 100vh;
+	min-width       : 100vw;
+}
+
+.btn-open-sidebar {
+	cursor          : pointer;
+	background-color: transparent;
+	border-radius   : 20px;
+	border          : none;
+	outline         : none;
+	padding         : .35rem .5rem;
+	transition      : background-color .3s;
+}
+
+.btn-open-sidebar i {
+	font-size: 26px;
+	position : relative;
+	z-index  : 1;
+}
+
+.btn-open-sidebar i::before {
+	position     : absolute;
+	content      : "";
+	height       : 36px;
+	width        : 36px;
+	top          : 50%;
+	left         : 50%;
+	transform    : translate(-50%, -50%);
+	border-radius: 20px;
+	z-index      : -1;
+	transition   : background-color .3s;
+}
+
+.btn-open-sidebar:hover i::before {
+	background-color: rgba(239, 239, 239, .8);
+}
+
+.btn-open-sidebar:focus i::before {
+	background-color: rgba(222, 222, 222, .8);
+}
+
+@media screen and (max-width: 799px) {
+	.main-sidebar {
+		position        : fixed;
+		top             : 0;
+		min-height      : 100vh;
+		min-width       : 50vw;
+		margin          : 0;
+		overflow-y      : auto;
+		z-index         : 50;
+		box-shadow      : 0px 0px 10px rgba(88, 88, 88, 0.9);
+		transform       : translateX(-100%);
+		background-color: white;
+		transition      : transform .2s;
+	}
+	
+	.main-sidebar.show + .overlay {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.btn-open-sidebar {
+		display: none;
+	}
+
+	.overlay {
+		display: none;
+	}
+}
