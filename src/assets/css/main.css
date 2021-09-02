@@ -132,7 +132,7 @@ select, option {
 	overflow                  : hidden;
 }
 
-.section-preview-button {
+.section-preview-input {
 	position   : relative;
 	grid-column: span 2;
 	min-height : 200px;
@@ -160,7 +160,7 @@ select, option {
 	border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 
-.section-preview-button .title-section {
+.section-preview-input .title-section {
 	border-top-left-radius : var(--border-radius);
 	border-top-right-radius: var(--border-radius);
 }
@@ -197,12 +197,12 @@ select, option {
 		margin-top: 4rem;
 	}
 
-	.section-preview-button {
+	.section-preview-input {
 		grid-column : span 1;
 		border-right: 1px solid hsl(0, 0%, 80%);
 	}
 
-	.section-preview-button .title-section {
+	.section-preview-input .title-section {
 		border-top-left-radius : var(--border-radius);
 		border-top-right-radius: 0;
 	}
