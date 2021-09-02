@@ -2,7 +2,7 @@
 // COMPONENTS
 import Sidebar from "~/components/Sidebar";
 // VIEWS
-import ButtonContextProvider from "~/contexts/ButtonContext.vue";
+import InputContextProvider from "~/contexts/InputContext.vue";
 // PROVIDER CONTEXTS
 import SectionPreview from "~/views/SectionPreview.vue";
 </script>
@@ -12,9 +12,9 @@ import SectionPreview from "~/views/SectionPreview.vue";
 		<Sidebar />
 
 		<div className="container">
-			<ButtonContextProvider>
+			<InputContextProvider>
 				<SectionPreview />
-			</ButtonContextProvider>
+			</InputContextProvider>
 		</div>
 	</main>
 </template>
