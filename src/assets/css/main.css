@@ -37,6 +37,16 @@ body {
 	font-size  : var(--base-font-size);
 }
 
+#app {
+	display       : flex;
+	flex-direction: column;
+	min-height    : 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 a {
 	text-decoration: none;
 	color          : inherit;
@@ -69,10 +79,6 @@ label {
 
 pre {
 	margin: 0;
-}
-
-main {
-  min-height: 100vh;
 }
 
 select, option {
@@ -187,8 +193,7 @@ select, option {
 
 @media screen and (min-width: 800px) {
 	main {
-		display    : flex;
-		align-items: flex-start;
+		display: flex;
 	}
 }
 
